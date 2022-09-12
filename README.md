@@ -1,2 +1,2 @@
 # VSLive-Trainings
-Paul's Training Classes for VS Live
+LINQ in .NET 6 from the Ground Up
