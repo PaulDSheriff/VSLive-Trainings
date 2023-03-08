@@ -1,2 +1,2 @@
 # VSLive-Trainings
-LINQ in .NET 6 from the Ground Up
+This folder is where I drop files for my online training courses.
