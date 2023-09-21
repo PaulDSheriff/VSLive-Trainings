@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:partialViews="clr-namespace:AdventureWorks.MAUI.PartialViews"
+             x:Class="AdventureWorks.MAUI.Views.UserDetailView"
+             Title="User Information">
+
+  <ScrollView>
+    <Border Style="{StaticResource Screen.Border}">
+      <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+            ColumnDefinitions="Auto,*">
+        <partialViews:HeaderView Grid.ColumnSpan="2" />
+        <Label Text="Login ID"
+               Grid.Row="1" />
+        <Entry Grid.Column="1"
+               Text=""
+               Grid.Row="1" />
+        <Label Text="First Name"
+               Grid.Row="2" />
+        <Entry Grid.Column="1"
+               Text=""
+               Grid.Row="2" />
+        <Label Text="Last Name"
+               Grid.Row="3" />
+        <Entry Grid.Column="1"
+               Text=""
+               Grid.Row="3" />
+        <Label Text="Password"
+               Grid.Row="4" />
+        <Entry Grid.Column="1"
+               Grid.Row="4"
+               IsPassword="True" />
+        <Label Text="Email Address"
+               Grid.Row="5" />
+        <Entry Grid.Column="1"
+               Grid.Row="5"
+               Text="" />
+        <Label Text="Employee Perks"
+               Grid.Row="6" />
+        <FlexLayout Grid.Row="6"
+                    Grid.Column="1"
+                    Wrap="Wrap"
+                    Direction="Row">
+          <HorizontalStackLayout>
+            <Label Text="401k" />
+            <CheckBox />
+          </HorizontalStackLayout>
+          <HorizontalStackLayout>
+            <Label Text="Health Care" />
+            <CheckBox />
+          </HorizontalStackLayout>
+          <HorizontalStackLayout>
+            <Label Text="HSA" />
+            <CheckBox />
+          </HorizontalStackLayout>
+          <HorizontalStackLayout>
+            <Label Text="Flex-Time" />
+            <CheckBox />
+          </HorizontalStackLayout>
+        </FlexLayout>
+        <Label Text="Still Employed?"
+               Grid.Row="7" />
+        <FlexLayout Grid.Row="7"
+                    Grid.Column="1"
+                    Wrap="Wrap"
+                    Direction="Row">
+          <HorizontalStackLayout>
+            <Label Text="Yes" />
+            <RadioButton GroupName="StillEmployed" />
+          </HorizontalStackLayout>
+          <HorizontalStackLayout>
+            <Label Text="No" />
+            <RadioButton GroupName="StillEmployed" />
+          </HorizontalStackLayout>
+        </FlexLayout>
+        <Label Text="Phone"
+               Grid.Row="8" />
+        <FlexLayout Grid.Row="8"
+                    Grid.Column="1">
+          <HorizontalStackLayout>
+            <Entry Grid.Column="0"
+                   MinimumWidthRequest="120" />
+            <Picker Grid.Column="1">
+              <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                  <x:String>Home</x:String>
+                  <x:String>Mobile</x:String>
+                  <x:String>Other</x:String>
+                </x:Array>
+              </Picker.ItemsSource>
+            </Picker>
+          </HorizontalStackLayout>
+        </FlexLayout>
+        <HorizontalStackLayout Grid.Row="9"
+                               Grid.Column="1">
+          <Button Text="Save" />
+          <Button Text="Cancel" />
+        </HorizontalStackLayout>
+      </Grid>
+    </Border>
+  </ScrollView>
+
+</ContentPage>
