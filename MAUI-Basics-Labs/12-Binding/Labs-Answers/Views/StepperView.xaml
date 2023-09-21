@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlBindingMAUI.Views.StepperView"
+             Title="Stepper Sample">
+  <HorizontalStackLayout VerticalOptions="Start">
+    <Label Text="Your Age"
+           VerticalTextAlignment="Center" />
+    <Entry BindingContext="{x:Reference theStepper}"
+           Text="{Binding Path=Value}" />
+    <Stepper x:Name="theStepper"
+             Minimum="18"
+             Maximum="99"
+             Increment="1" />
+  </HorizontalStackLayout>
+</ContentPage>

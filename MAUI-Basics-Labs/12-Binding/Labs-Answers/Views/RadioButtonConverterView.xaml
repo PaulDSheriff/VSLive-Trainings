@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlBindingMAUI.Views.RadioButtonConverterView"
+             xmlns:converters="clr-namespace:XamlBindingMAUI.Converters"
+             Title="RadioButton Converter Class Sample">
+  <ContentPage.Resources>
+    <converters:InvertBooleanConverter x:Key="invertBoolean" />
+  </ContentPage.Resources>
+  
+  <Border Stroke="Black"
+          StrokeThickness="2"
+          HorizontalOptions="Start"
+          VerticalOptions="Start"
+          MinimumHeightRequest="200"
+          MinimumWidthRequest="300"
+          Margin="10">
+    <Grid Margin="10"
+          RowDefinitions="Auto,Auto,Auto"
+          ColumnDefinitions="Auto,*">
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Text="Still Employed?" />
+      <Label Grid.Row="1"
+             Grid.Column="0"
+             Text="Yes" />
+      <RadioButton Grid.Row="1"
+                   Grid.Column="1"
+                   IsChecked="{Binding Path=IsActive}" />
+      <Label Grid.Row="2"
+             Grid.Column="0"
+             Text="No" />
+      <RadioButton Grid.Row="2"
+                   Grid.Column="1"
+                   IsChecked="{Binding Path=IsActive, Converter={StaticResource invertBoolean}}" />
+    </Grid>
+  </Border>
+
+</ContentPage>

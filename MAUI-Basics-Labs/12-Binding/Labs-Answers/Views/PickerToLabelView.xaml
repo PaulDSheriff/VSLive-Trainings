@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlBindingMAUI.Views.PickerToLabelView"
+             Title="Picker to Label Sample">
+
+  <Border Stroke="Black"
+          StrokeThickness="2"
+          HorizontalOptions="Start"
+          VerticalOptions="Start"
+          MinimumHeightRequest="200"
+          MinimumWidthRequest="300">
+    <VerticalStackLayout Margin="10">
+      <Picker x:Name="Language">
+        <Picker.ItemsSource>
+          <x:Array Type="{x:Type x:String}">
+            <x:String>C#</x:String>
+            <x:String>Visual Basic</x:String>
+            <x:String>C++</x:String>
+            <x:String>F#</x:String>
+          </x:Array>
+        </Picker.ItemsSource>
+      </Picker>
+      <Label Text="{Binding Path=SelectedItem}"
+             BindingContext="{x:Reference Language}" />
+    </VerticalStackLayout>
+  </Border>
+
+</ContentPage>
