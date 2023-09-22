@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdventureWorks.EntityLayer\AdventureWorks.EntityLayer.csproj" />
+    <ProjectReference Include="..\AdventureWorks.ViewModelLayer\AdventureWorks.ViewModelLayer.csproj" />
+    <ProjectReference Include="..\Common.Library.WPF\Common.Library.WPF.csproj" />
+    <ProjectReference Include="..\Common.Library\Common.Library.csproj" />
+  </ItemGroup>
+
+</Project>
