@@ -1,0 +1,29 @@
+﻿using System;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Data;
+
+namespace SimpleDataBindingSamples.Converters
+{
+  /// <summary>
+  /// NOTE: This class is built-in to WPF, so you do not need to use this class.
+  ///       This is here for illustrative purposes only.
+  /// </summary>
+  public class BooleanToVisiblityConverter : IValueConverter
+  {
+    public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+      if ((bool)value) {
+        return Visibility.Visible;
+      }
+      else {
+        return Visibility.Collapsed;
+      }
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+      return null;
+    }
+  }
+}
