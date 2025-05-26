@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Declaring Constants</title>
+</head>
+
+<body>
+  <header>
+    <h1>Declaring Constants</h1>
+  </header>
+
+  <main>
+    <p>Open your F12 Browser Tools to view the results.</p>
+    <p>Use the 'const' keyword to assign a value to a named variable. This value cannot be changed after the initial declaration/assignment.</p>
+  </main>
+
+  <script>
+    'use strict';
+
+    // Once a value is assigned to a
+    // 'const' it can not be changed
+    // Must declare and assign value 
+    // to a constant on one line
+    const name = "A New Product";
+    console.log(name);
+
+    // Declare two constants on one line
+    // NOTE: Avoid this syntax as it is hard to read
+    const standardCost = 5, listPrice = 10;
+    console.log(standardCost);
+    console.log(listPrice);
+
+    // Can't reassign constant after 
+    // it has been initialized
+    standardCost = "5";
+  </script>
+</body>
+
+</html>

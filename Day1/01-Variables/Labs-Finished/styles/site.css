@@ -1,0 +1,11 @@
+body {
+  margin: 1em;  
+}
+
+form div label {
+  margin-bottom: 2em;
+}
+
+form div input {
+  margin-bottom: 1em;
+}

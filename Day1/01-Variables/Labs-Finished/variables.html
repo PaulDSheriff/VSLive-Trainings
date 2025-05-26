@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>RV Information</title>
+
+  <link href="styles/site.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>RV Information</h1>
+  </header>
+
+  <main>
+    <form>
+      <div>
+        <label for="year">RV Year</label>
+        <input type="number" id="year" name="year" value="2022" />
+      </div>
+      <div>
+        <label for="make">RV Make</label>
+        <input type="text" id="make" name="make" value="Newmar" />
+      </div>
+      <div>
+        <label for="model">RV Model</label>
+        <input type="text" id="model" name="model" value="New Aire" />
+      </div>
+      <div>
+        <button type="button" onclick="displayAge();">Display Age</button>
+        <button type="button" onclick="displayYearMakeModel();">Display Year/Make/Model</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    'use strict';
+
+    function displayAge() {
+      let currentYear = 2025;
+      let rvYear = document.getElementById("year").value;
+
+      alert(currentYear - rvYear);
+    }
+
+    function displayYearMakeModel() {
+      let year = document.getElementById("year").value;
+      let make = document.getElementById("make").value;
+      let model = document.getElementById("make").value;
+
+      let rvInfo = `${year} ${make} ${model}`;
+
+      console.log(rvInfo);
+      alert(rvInfo);
+    }
+  </script>
+</body>
+
+</html>
